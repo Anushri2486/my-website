@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <!---Styles-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!---Header design-->
+    <header class="header--navigation">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/atc5.png" width="50" height="50" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown nav--item-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown--menu-link" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#userService">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---Header design End-->
+    <!--Form Section-->
+                
+    <!-- Contact Section -->
+   <section class="form--section aos-init aos-animate" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form--section-tab">
+                    <div class="accordion--section">
+                        <div class="accordion--section-title">
+                            <h3>FAQ</h3>
+                        </div>
+                        <div class="accordion accordion-flush " id="accordionFlush">
+                            <div class="accordion-item accordion-flush-space">
+                                <h2 class="accordion-header accordion--header-border" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        When do applications close?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                                    data-bs-parent="#accordionFlush">
+                                    <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item accordion-flush-space">
+                                <h2 class="accordion-header accordion--header-border" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        How long will the application take?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                                    data-bs-parent="#accordionFlush">
+                                    <div class="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item accordion-flush-space">
+                                <h2 class="accordion-header accordion--header-border" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Can I choose when I attend an Assessment Centre?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                                    data-bs-parent="#accordionFlush">
+                                    <div class="accordion-body">as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form--section-tab">
+                    <div class="contact-area">
+                        <div class="form--section-title">
+                            <h3>Request
+                                <span>Registration</span>
+                            </h3>
+                        </div>
+                        <form id="myForm" onsubmit="return validateForm()" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12 form--input">
+                                    <input type="text" class="form-control form-group" id="firstName" name="firstname" placeholder="First Name" onblur="validateFirstName()">
+                                    <span id="firstNameError" class="errorMessage"></span>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 form--input">
+                                    <input type="text" class="form-control form-group" id="lastName" name="lastname" placeholder="Last Name" onblur="validateLastName()">
+                                    <span id="lastNameError" class="errorMessage"></span>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 form--input">
+                                    <input type="text" class="form-control form-group" id="email" name="email" placeholder="Email" onblur="validateEmailAddress()">
+                                    <span id="emailError" class="errorMessage"></span>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 form--input">
+                                    <input type="text" class="form-control form-group" id="phone" name="phone" placeholder="Phone" onblur="validatePhone()">
+                                    <span id="phoneError" class="errorMessage"></span>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form--input">
+                                    <input type="text" class="form-control form-group" id="address" name="address" placeholder="Address" onblur="validateAddress()">
+                                    <span id="addressError" class="errorMessage"></span>
+                                </div>
+                                <div class="col-12 form--input">
+                                    <button type="submit" class="btn btn-dark" >Submit</button>
+                                </div>
+                                <div class="col-12">
+                                    <a href="index.html">
+                                       <button type="button" class="btn btn-dark">Back</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+   </section>
+   <!--Form Section End-->
+   <!--Table section-->
+   <section id="userService" class="table--section">
+        <div class="container">
+            <div class="form--section-title">
+                <h3>User
+                    <span>Details</span>
+                </h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered border-dark table-light table-striped table-hover ">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Address</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider table--section-body" id="tableData">
+                       <!--appending the table row and coloum by using js and ajax--> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            
+   </section>
+   <!--Table section end-->
+    <!--footer-main-->
+    <footer class="footer-main">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 footer--tablet">
+                        <div class="about-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/atc2.jpg" alt="" width="150px" height="100px">
+                                </a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, temporibus?</p>
+                            <ul class="location-link">
+                                <li class="item">
+                                    <i class="fa fa-map-marker"></i>
+                                    <p>Dublin, Ireland</p>
+                                </li>
+                                <li class="item">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <a href="#">
+                                        <p>atcsupport@abc.com</p>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <p>1 (877) 889-9009</p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline social-icons d-flex">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 footer--tablet">
+                        <h6>Services</h6>
+                        <ul class="menu-link">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>Technology Implementation</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>Cybersecurity</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>Digital Transformation</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 footer--tablet-post">
+                        <div class="social-links">
+                            <h6>Recent Posts</h6>
+                            <ul>
+                                <li class="item">
+                                    <div class="media d-flex">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/recentpost.jpeg"
+                                                    alt="post-thumb" width="150px" height="100px">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a href="#">Growth</a></h5>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                                                dolorem.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="media d-flex">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/recentpost.jpeg"
+                                                    alt="post-thumb" width="150px" height="100px">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <a href="#">Post Title</a>
+                                            </h5>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                                                dolorem.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clearfix">
+                <div class="copyright-text">
+                    <p>&copy; 2023 Accenture. All Rights Reserved.
+                        <a href="index.html">Accenture</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!--End footer-main-->
+    <!--Modal-->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Successfully Submit the data ....!</h5>
+              <button type="button" class="btn-close cross-button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close-button" data-bs-dismiss="modal" id="closeBtn">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--Modal End-->
+    <!--Scripting-->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        if (window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+
+</html>
