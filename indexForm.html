@@ -14,6 +14,7 @@
 
 <body>
     <!---Header design-->
+  
     <header class="header--navigation">
         <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
             <div class="container-fluid">
@@ -38,9 +39,9 @@
                               Services
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark dropdown--menu-link" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#userService">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#userService">User Details</a></li>
+                                <li><a class="dropdown-item" href="#">Action One</a></li>
+                                <li><a class="dropdown-item" href="#">Action Two</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -58,9 +59,8 @@
         </nav>
     </header>
     <!---Header design End-->
+
     <!--Form Section-->
-                
-    <!-- Contact Section -->
    <section class="form--section aos-init aos-animate" data-aos="fade-up">
         <div class="container">
             <div class="row">
@@ -119,23 +119,23 @@
                         <form id="myForm" onsubmit="return validateForm()" method="post">
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 col-xs-12 form--input">
-                                    <input type="text" class="form-control form-group" id="firstName" name="firstname" placeholder="First Name" onblur="validateFirstName()">
+                                    <input type="text" class="form-control form-group" id="firstName" name="firstname" placeholder="First Name" onblur="validateFirstName()" onkeyup="validateFirstName()">
                                     <span id="firstNameError" class="errorMessage"></span>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 form--input">
-                                    <input type="text" class="form-control form-group" id="lastName" name="lastname" placeholder="Last Name" onblur="validateLastName()">
+                                    <input type="text" class="form-control form-group" id="lastName" name="lastname" placeholder="Last Name" onblur="validateLastName()" onkeyup="validateLastName()">
                                     <span id="lastNameError" class="errorMessage"></span>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 form--input">
-                                    <input type="text" class="form-control form-group" id="email" name="email" placeholder="Email" onblur="validateEmailAddress()">
+                                    <input type="text" class="form-control form-group" id="email" name="email" placeholder="Email" onblur="validateEmailAddress()" onkeyup="validateEmailAddress()">
                                     <span id="emailError" class="errorMessage"></span>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 form--input">
-                                    <input type="text" class="form-control form-group" id="phone" name="phone" placeholder="Phone" onblur="validatePhone()">
+                                    <input type="text" class="form-control form-group" id="phone" name="phone" placeholder="Phone" onblur="validatePhone()" onkeyup="validatePhone()">
                                     <span id="phoneError" class="errorMessage"></span>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 form--input">
-                                    <input type="text" class="form-control form-group" id="address" name="address" placeholder="Address" onblur="validateAddress()">
+                                    <input type="text" class="form-control form-group" id="address" name="address" placeholder="Address" onblur="validateAddress()" onkeyup="validateAddress()">
                                     <span id="addressError" class="errorMessage"></span>
                                 </div>
                                 <div class="col-12 form--input">
@@ -154,6 +154,12 @@
         </div>
    </section>
    <!--Form Section End-->
+   <div class="loaderIcon text-center"> 
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            </div>
+        </div>
+    </div>
    <!--Table section-->
    <section id="userService" class="table--section">
         <div class="container">
@@ -179,10 +185,10 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-            
+        </div>   
    </section>
    <!--Table section end-->
+
     <!--footer-main-->
     <footer class="footer-main">
         <div class="footer-top">
@@ -293,12 +299,13 @@
         </div>
     </footer>
      <!--End footer-main-->
+
     <!--Modal-->
     <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Successfully Submit the data ....!</h5>
+              <h5 class="modal-title fw-bold" id="exampleModalLabel">Submitted Successfully ....!</h5>
               <button type="button" class="btn-close cross-button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -311,6 +318,7 @@
         </div>
     </div>
     <!--Modal End-->
+    
     <!--Scripting-->
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/jquery.min.js"></script>
